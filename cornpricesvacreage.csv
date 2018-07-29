@@ -1,0 +1,232 @@
+﻿State,LandCategory,Region,Region or State,Year,Acre_Value,CornPrice
+Northeast,Cropland,Northeast,Region,1997,2590,2.75
+Lake,Cropland,Lake States,Region,1997,1130,2.75
+Corn Belt,Cropland,Corn Belt,Region,1997,1760,2.75
+Northern Plains,Cropland,Northern Plains,Region,1997,633,2.75
+Appalachian,Cropland,Appalachian,Region,1997,1730,2.75
+Southeast,Cropland,Southeast,Region,1997,1610,2.75
+Delta,Cropland,Delta States,Region,1997,956,2.75
+Southern Plains,Cropland,Southern Plains,Region,1997,641,2.75
+Mountain,Cropland,Mountain,Region,1997,904,2.75
+Pacific,Cropland,Pacific,Region,1997,3030,2.75
+United States,Cropland,Continental U.S.,Region,1997,1270,2.75
+Northeast,Cropland,Northeast,Region,1998,2620,2.38
+Lake,Cropland,Lake States,Region,1998,1220,2.38
+Corn Belt,Cropland,Corn Belt,Region,1998,1910,2.38
+Northern Plains,Cropland,Northern Plains,Region,1998,648,2.38
+Appalachian,Cropland,Appalachian,Region,1998,1830,2.38
+Southeast,Cropland,Southeast,Region,1998,1670,2.38
+Delta,Cropland,Delta States,Region,1998,996,2.38
+Southern Plains,Cropland,Southern Plains,Region,1998,667,2.38
+Mountain,Cropland,Mountain,Region,1998,936,2.38
+Pacific,Cropland,Pacific,Region,1998,3150,2.38
+United States,Cropland,Continental U.S.,Region,1998,1340,2.38
+Northeast,Cropland,Northeast,Region,1999,2700,2.12
+Lake,Cropland,Lake States,Region,1999,1340,2.12
+Corn Belt,Cropland,Corn Belt,Region,1999,2030,2.12
+Northern Plains,Cropland,Northern Plains,Region,1999,658,2.12
+Appalachian,Cropland,Appalachian,Region,1999,1930,2.12
+Southeast,Cropland,Southeast,Region,1999,1720,2.12
+Delta,Cropland,Delta States,Region,1999,1030,2.12
+Southern Plains,Cropland,Southern Plains,Region,1999,681,2.12
+Mountain,Cropland,Mountain,Region,1999,968,2.12
+Pacific,Cropland,Pacific,Region,1999,3350,2.12
+United States,Cropland,Continental U.S.,Region,1999,1410,2.12
+Northeast,Cropland,Northeast,Region,2000,2690,2.12
+Lake,Cropland,Lake States,Region,2000,1450,2.12
+Corn Belt,Cropland,Corn Belt,Region,2000,2040,2.12
+Northern Plains,Cropland,Northern Plains,Region,2000,680,2.12
+Appalachian,Cropland,Appalachian,Region,2000,2070,2.12
+Southeast,Cropland,Southeast,Region,2000,1960,2.12
+Delta,Cropland,Delta States,Region,2000,1070,2.12
+Southern Plains,Cropland,Southern Plains,Region,2000,721,2.12
+Mountain,Cropland,Mountain,Region,2000,990,2.12
+Pacific,Cropland,Pacific,Region,2000,3250,2.12
+United States,Cropland,Continental U.S.,Region,2000,1460,2.12
+Northeast,Cropland,Northeast,Region,2001,2820,2.11
+Lake,Cropland,Lake States,Region,2001,1560,2.11
+Corn Belt,Cropland,Corn Belt,Region,2001,2100,2.11
+Northern Plains,Cropland,Northern Plains,Region,2001,700,2.11
+Appalachian,Cropland,Appalachian,Region,2001,2210,2.11
+Southeast,Cropland,Southeast,Region,2001,2090,2.11
+Delta,Cropland,Delta States,Region,2001,1120,2.11
+Southern Plains,Cropland,Southern Plains,Region,2001,753,2.11
+Mountain,Cropland,Mountain,Region,2001,1030,2.11
+Pacific,Cropland,Pacific,Region,2001,3310,2.11
+United States,Cropland,Continental U.S.,Region,2001,1510,2.11
+Northeast,Cropland,Northeast,Region,2002,3210,2.29
+Lake,Cropland,Lake States,Region,2002,1720,2.29
+Corn Belt,Cropland,Corn Belt,Region,2002,2180,2.29
+Northern Plains,Cropland,Northern Plains,Region,2002,720,2.29
+Appalachian,Cropland,Appalachian,Region,2002,2340,2.29
+Southeast,Cropland,Southeast,Region,2002,2240,2.29
+Delta,Cropland,Delta States,Region,2002,1160,2.29
+Southern Plains,Cropland,Southern Plains,Region,2002,808,2.29
+Mountain,Cropland,Mountain,Region,2002,1120,2.29
+Pacific,Cropland,Pacific,Region,2002,3410,2.29
+United States,Cropland,Continental U.S.,Region,2002,1590,2.29
+Northeast,Cropland,Northeast,Region,2003,3400,2.34
+Lake,Cropland,Lake States,Region,2003,1860,2.34
+Corn Belt,Cropland,Corn Belt,Region,2003,2270,2.34
+Northern Plains,Cropland,Northern Plains,Region,2003,737,2.34
+Appalachian,Cropland,Appalachian,Region,2003,2490,2.34
+Southeast,Cropland,Southeast,Region,2003,2350,2.34
+Delta,Cropland,Delta States,Region,2003,1210,2.34
+Southern Plains,Cropland,Southern Plains,Region,2003,863,2.34
+Mountain,Cropland,Mountain,Region,2003,1170,2.34
+Pacific,Cropland,Pacific,Region,2003,3500,2.34
+United States,Cropland,Continental U.S.,Region,2003,1660,2.34
+Northeast,Cropland,Northeast,Region,2004,3800,2.54
+Lake,Cropland,Lake States,Region,2004,2030,2.54
+Corn Belt,Cropland,Corn Belt,Region,2004,2450,2.54
+Northern Plains,Cropland,Northern Plains,Region,2004,783,2.54
+Appalachian,Cropland,Appalachian,Region,2004,2670,2.54
+Southeast,Cropland,Southeast,Region,2004,2460,2.54
+Delta,Cropland,Delta States,Region,2004,1270,2.54
+Southern Plains,Cropland,Southern Plains,Region,2004,902,2.54
+Mountain,Cropland,Mountain,Region,2004,1200,2.54
+Pacific,Cropland,Pacific,Region,2004,3570,2.54
+United States,Cropland,Continental U.S.,Region,2004,1770,2.54
+Northeast,Cropland,Northeast,Region,2005,4320,2.11
+Lake,Cropland,Lake States,Region,2005,2230,2.11
+Corn Belt,Cropland,Corn Belt,Region,2005,2790,2.11
+Northern Plains,Cropland,Northern Plains,Region,2005,890,2.11
+Appalachian,Cropland,Appalachian,Region,2005,2940,2.11
+Southeast,Cropland,Southeast,Region,2005,3330,2.11
+Delta,Cropland,Delta States,Region,2005,1420,2.11
+Southern Plains,Cropland,Southern Plains,Region,2005,979,2.11
+Mountain,Cropland,Mountain,Region,2005,1230,2.11
+Pacific,Cropland,Pacific,Region,2005,4380,2.11
+United States,Cropland,Continental U.S.,Region,2005,2060,2.11
+Northeast,Cropland,Northeast,Region,2006,4970,2.61
+Lake,Cropland,Lake States,Region,2006,2480,2.61
+Corn Belt,Cropland,Corn Belt,Region,2006,3090,2.61
+Northern Plains,Cropland,Northern Plains,Region,2006,985,2.61
+Appalachian,Cropland,Appalachian,Region,2006,3290,2.61
+Southeast,Cropland,Southeast,Region,2006,3790,2.61
+Delta,Cropland,Delta States,Region,2006,1540,2.61
+Southern Plains,Cropland,Southern Plains,Region,2006,1110,2.61
+Mountain,Cropland,Mountain,Region,2006,1520,2.61
+Pacific,Cropland,Pacific,Region,2006,4690,2.61
+United States,Cropland,Continental U.S.,Region,2006,2300,2.61
+Northeast,Cropland,Northeast,Region,2007,5350,3.75
+Lake,Cropland,Lake States,Region,2007,2830,3.75
+Corn Belt,Cropland,Corn Belt,Region,2007,3530,3.75
+Northern Plains,Cropland,Northern Plains,Region,2007,1090,3.75
+Appalachian,Cropland,Appalachian,Region,2007,3570,3.75
+Southeast,Cropland,Southeast,Region,2007,4180,3.75
+Delta,Cropland,Delta States,Region,2007,1690,3.75
+Southern Plains,Cropland,Southern Plains,Region,2007,1250,3.75
+Mountain,Cropland,Mountain,Region,2007,1640,3.75
+Pacific,Cropland,Pacific,Region,2007,5420,3.75
+United States,Cropland,Continental U.S.,Region,2007,2530,3.75
+Northeast,Cropland,Northeast,Region,2008,5590,5.32
+Lake,Cropland,Lake States,Region,2008,3080,5.32
+Corn Belt,Cropland,Corn Belt,Region,2008,4030,5.32
+Northern Plains,Cropland,Northern Plains,Region,2008,1280,5.32
+Appalachian,Cropland,Appalachian,Region,2008,3730,5.32
+Southeast,Cropland,Southeast,Region,2008,4380,5.32
+Delta,Cropland,Delta States,Region,2008,1800,5.32
+Southern Plains,Cropland,Southern Plains,Region,2008,1390,5.32
+Mountain,Cropland,Mountain,Region,2008,1670,5.32
+Pacific,Cropland,Pacific,Region,2008,5570,5.32
+United States,Cropland,Continental U.S.,Region,2008,2760,5.32
+Northeast,Cropland,Northeast,Region,2009,5340,3.75
+Lake,Cropland,Lake States,Region,2009,3020,3.75
+Corn Belt,Cropland,Corn Belt,Region,2009,3910,3.75
+Northern Plains,Cropland,Northern Plains,Region,2009,1300,3.75
+Appalachian,Cropland,Appalachian,Region,2009,3600,3.75
+Southeast,Cropland,Southeast,Region,2009,3960,3.75
+Delta,Cropland,Delta States,Region,2009,1810,3.75
+Southern Plains,Cropland,Southern Plains,Region,2009,1380,3.75
+Mountain,Cropland,Mountain,Region,2009,1610,3.75
+Pacific,Cropland,Pacific,Region,2009,5210,3.75
+United States,Cropland,Continental U.S.,Region,2009,2670,3.75
+Northeast,Cropland,Northeast,Region,2010,5270,4.24
+Lake,Cropland,Lake States,Region,2010,3010,4.24
+Corn Belt,Cropland,Corn Belt,Region,2010,4090,4.24
+Northern Plains,Cropland,Northern Plains,Region,2010,1410,4.24
+Appalachian,Cropland,Appalachian,Region,2010,3490,4.24
+Southeast,Cropland,Southeast,Region,2010,3800,4.24
+Delta,Cropland,Delta States,Region,2010,1890,4.24
+Southern Plains,Cropland,Southern Plains,Region,2010,1400,4.24
+Mountain,Cropland,Mountain,Region,2010,1520,4.24
+Pacific,Cropland,Pacific,Region,2010,4980,4.24
+United States,Cropland,Continental U.S.,Region,2010,2700,4.24
+Northeast,Cropland,Northeast,Region,2011,5200,6.79
+Lake,Cropland,Lake States,Region,2011,3310,6.79
+Corn Belt,Cropland,Corn Belt,Region,2011,4810,6.79
+Northern Plains,Cropland,Northern Plains,Region,2011,1730,6.79
+Appalachian,Cropland,Appalachian,Region,2011,3440,6.79
+Southeast,Cropland,Southeast,Region,2011,3810,6.79
+Delta,Cropland,Delta States,Region,2011,2020,6.79
+Southern Plains,Cropland,Southern Plains,Region,2011,1450,6.79
+Mountain,Cropland,Mountain,Region,2011,1540,6.79
+Pacific,Cropland,Pacific,Region,2011,5070,6.79
+United States,Cropland,Continental U.S.,Region,2011,2980,6.79
+Northeast,Cropland,Northeast,Region,2012,5280,6.88
+Lake,Cropland,Lake States,Region,2012,3790,6.88
+Corn Belt,Cropland,Corn Belt,Region,2012,5600,6.88
+Northern Plains,Cropland,Northern Plains,Region,2012,2210,6.88
+Appalachian,Cropland,Appalachian,Region,2012,3550,6.88
+Southeast,Cropland,Southeast,Region,2012,3710,6.88
+Delta,Cropland,Delta States,Region,2012,2160,6.88
+Southern Plains,Cropland,Southern Plains,Region,2012,1500,6.88
+Mountain,Cropland,Mountain,Region,2012,1600,6.88
+Pacific,Cropland,Pacific,Region,2012,5310,6.88
+United States,Cropland,Continental U.S.,Region,2012,3350,6.88
+Northeast,Cropland,Northeast,Region,2013,5260,5.81
+Lake,Cropland,Lake States,Region,2013,4240,5.81
+Corn Belt,Cropland,Corn Belt,Region,2013,6470,5.81
+Northern Plains,Cropland,Northern Plains,Region,2013,2720,5.81
+Appalachian,Cropland,Appalachian,Region,2013,3690,5.81
+Southeast,Cropland,Southeast,Region,2013,3690,5.81
+Delta,Cropland,Delta States,Region,2013,2380,5.81
+Southern Plains,Cropland,Southern Plains,Region,2013,1480,5.81
+Mountain,Cropland,Mountain,Region,2013,1780,5.81
+Pacific,Cropland,Pacific,Region,2013,5690,5.81
+United States,Cropland,Continental U.S.,Region,2013,3810,5.81
+Northeast,Cropland,Northeast,Region,2014,5260,4.17
+Lake,Cropland,Lake States,Region,2014,4670,4.17
+Corn Belt,Cropland,Corn Belt,Region,2014,7000,4.17
+Northern Plains,Cropland,Northern Plains,Region,2014,3090,4.17
+Appalachian,Cropland,Appalachian,Region,2014,3780,4.17
+Southeast,Cropland,Southeast,Region,2014,3730,4.17
+Delta,Cropland,Delta States,Region,2014,2510,4.17
+Southern Plains,Cropland,Southern Plains,Region,2014,1630,4.17
+Mountain,Cropland,Mountain,Region,2014,1690,4.17
+Pacific,Cropland,Pacific,Region,2014,5860,4.17
+United States,Cropland,Continental U.S.,Region,2014,4100,4.17
+Northeast,Cropland,Northeast,Region,2015,5330,3.8
+Lake,Cropland,Lake States,Region,2015,4730,3.8
+Corn Belt,Cropland,Corn Belt,Region,2015,6840,3.8
+Northern Plains,Cropland,Northern Plains,Region,2015,3130,3.8
+Appalachian,Cropland,Appalachian,Region,2015,3830,3.8
+Southeast,Cropland,Southeast,Region,2015,3770,3.8
+Delta,Cropland,Delta States,Region,2015,2600,3.8
+Southern Plains,Cropland,Southern Plains,Region,2015,1770,3.8
+Mountain,Cropland,Mountain,Region,2015,1740,3.8
+Pacific,Cropland,Pacific,Region,2015,6160,3.8
+United States,Cropland,Continental U.S.,Region,2015,4130,3.8
+Northeast,Cropland,Northeast,Region,2016,5390,3.6
+Lake,Cropland,Lake States,Region,2016,4740,3.6
+Corn Belt,Cropland,Corn Belt,Region,2016,6710,3.6
+Northern Plains,Cropland,Northern Plains,Region,2016,2960,3.6
+Appalachian,Cropland,Appalachian,Region,2016,3840,3.6
+Southeast,Cropland,Southeast,Region,2016,3920,3.6
+Delta,Cropland,Delta States,Region,2016,2680,3.6
+Southern Plains,Cropland,Southern Plains,Region,2016,1820,3.6
+Mountain,Cropland,Mountain,Region,2016,1760,3.6
+Pacific,Cropland,Pacific,Region,2016,6330,3.6
+United States,Cropland,Continental U.S.,Region,2016,4090,3.62
+Northeast,Cropland,Northeast,Region,2017,5350,3.62
+Lake,Cropland,Lake States,Region,2017,4830,3.62
+Corn Belt,Cropland,Corn Belt,Region,2017,6670,3.62
+Northern Plains,Cropland,Northern Plains,Region,2017,2830,3.62
+Appalachian,Cropland,Appalachian,Region,2017,3890,3.62
+Southeast,Cropland,Southeast,Region,2017,3940,3.62
+Delta,Cropland,Delta States,Region,2017,2760,3.62
+Southern Plains,Cropland,Southern Plains,Region,2017,1930,3.62
+Mountain,Cropland,Mountain,Region,2017,1780,3.62
+Pacific,Cropland,Pacific,Region,2017,6570,3.62
+United States,Cropland,Continental U.S.,Region,2017,4090,3.62

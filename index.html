@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>USA Crop Field Values</title>
+		<link rel="stylesheet" href="style.css">
+        <script src="https://d3js.org/d3.v4.js"></script>
+		<script src="jquery-1.11.3.js"></script>
+		<script src="jquery.fullPage.min.js"></script>
+		<link rel="stylesheet" href="jquery.fullPage.css">
+		<link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
+	</head>
+	<body>
+		<div id="wrapper">
+			<div class="section" id="sectionImage1" style="width:100%; height:100%; padding-left:3%; padding-right:1.5%;">
+				<div style="text-align: left; width: 100%;">
+					<div style="font-size: 80px; font-weight: bold; color:#FFFFFF;">America's Nest Egg<br/></div>
+					<p style="font-size: 33.5px; -webkit-margin-before: 0.2em; -webkit-margin-after: 0.2em; color:#FFFFFF;">How will the trade war influence America's Corn Production?</p><br/>
+                    <div class="bodyText"><div style="font-size: 20px; font-weight: bold; color:#FFFFFF;">What is Cropland? </div></br>
+                    <div style="font-size: 16px; font-weight: bold; color:#FFFFFF;">Cropland is defined as, "Land used for the production of crops for harvest.", and for many American farmers it represents their families entire livelihood.  
+                    Regardless of your political alignment, recent tarriffs imposed on American agriculture will presumably hurt America's heartland. China, Canada, Mexico, and the EU have all announced tarriffs on American agriculture, specifically corn, and this presentation aims to understand how these tarriffs will influence the value of American farms.</div>
+                    </br></br>   
+                    <div style="font-size: 20px; font-weight: bold; color:#FFFFFF;">Driving Questions:</div></br>
+                    <div style="font-size: 16px; font-weight: bold; color:#FFFFFF;">&nbsp;&nbsp;1. Which states will be most impacted by increased tarriffs? </div></br>
+                    <div style="font-size: 16px; font-weight: bold; color:#FFFFFF;">&nbsp;&nbsp;2. How does the price of corn influence the value of American farms? </div></br>
+               
+					</div>
+				</div>
+			</div>
+			<div class="section" style="width:100%; height:100%; padding-left:3%; padding-right:1%;">
+				<div style="float: left; width: 40%; text-align: center;">
+					<div style="padding-left: 162px; font-size: 20px; font-weight: bold;">Cropland Value by State<br/></div>
+					<svg id="CroplandVYear" width="800" height="500"></svg>
+				</div>
+				<div style="float: right; width: 38%;">
+					<p style="font-size: 30px; font-weight: bold; color:#1a1a1a;">Which States Cost the Most to Grow?<br/></p>
+					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Current Cropland Value:</p>
+					<p class="bodyText">The visualization to the left displays the cost of cropland, across the largest corn producing state, broken out by region from 1997 to 2017. The three most expensive states to purchase cropland are: New Jersey, California, and Arizona; respectively. This visualization provides a rough estimation of what a families farm would be worth if the land were to sell (the largest asset of any farm).</p>
+					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Changes Over Time:</p>
+					<p class="bodyText">As we can see, on average, the price of cropland has steadily increased over time. In some cases, a few states, such as California, have increased in value above its 2007-2008 peak which positively impacts farmers as their farms are worth more now than ever before. However, how will the tarriffs imposed on corn influence these values? Which states will be impacted the most? Feel free to click regions in the legend to narrow down to specific points. You can also highlight specific points to see the: State, Year, and Cost Per Acre.</p>
+				</div>			
+			</div>
+
+			<div class="section" style="width:100%; height:100%; padding-left:3%; padding-right:1%;">
+				<div style="float: right; width: 62%; text-align: center;">
+					<div style="padding-right: 100px; font-size: 20px; font-weight: bold;">Total Corn Production V. Number of Farms Per State<br/></div>
+					<svg id="CornProduction" width="800" height="500"></svg>
+				</div>
+				<div style="float: left; width: 30%;">
+					<p style="font-size: 30px; font-weight: bold; color:#1a1a1a;">Which States Produce the Most Corn?<br/></p>
+					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Gross Corn Production:</p>
+					<p class="bodyText">The visualization to the right displays the gross corn production (in bushels) plotted against the number of farms of each respective state. The states are colored with respect to their region as described in the previous slide. As we can see, the top five corn producing states are: Iowa, Illinois, Nebraska, Minnesota, and Indiana, respectively, and 11 states produce more than 400 million bushels a year. Interestingly, the impact of the tarriffs may be less isolated than simply the 'Corn Belt'.</p>
+					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Total Number of Farms:</p>
+					<p class="bodyText">The top three states in regards to number of farms are: Missouri, Iowa, and Oklahoma. There is not a direct correlation between corn production and number of farms because not all of the farms produce corn. This does, however, give us an idea of which states rely the most heavily on corn which are: Iowa, Illinois, Nebraska, and Minnesota.</p>
+				</div>	
+			</div>
+
+			<div class="section" style="width:100%; height:100%; padding-left:3%; padding-right:1%;">
+				<div style="float: left; width: 40%; text-align: center;">
+					<div style="padding-left: 140px; font-size: 20px; font-weight: bold;">Price Per Bushel of Corn (1960-2017)<br/></div>
+					<svg id="CornPrice2" width="800" height="500"></svg>
+				</div>
+				<div style="float: right; width: 38%;">
+					<p style="font-size: 30px; font-weight: bold; color:#1a1a1a;">How has the Price of Corn Changed?<br/></p>
+					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Looking at the History:</p>
+					<p class="bodyText">The visualization to the left displays the price per bushel of corn from 1960 to 2017. As we can see, the price of corn remained relatively constant between the $2.00 and $3.00 price band between 1973 and 2006. Once 2007 rolled around, the price per bushel skyrocketed along with the entire US economy. Corn prices felt a slight decrease during the financial crisis; however, the prices boomed to the highest price in history in 2012. This price increase was driven by nation-wide droughts, and the price has since come down to pre-recession levels.</p>
+					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">How does this Compare to Cropland Value?</p>
+					<p class="bodyText">The price of corn has been on a roller-coaster ride over the past 10 years, but how does this ride compare to land values?</p>
+				</div>	
+			</div>
+			<div class="section" style="width:100%; height:100%; padding-left:3%; padding-right:1%;">
+				<div style="float: right; width: 60%; text-align: center">
+					<div style="padding-right: 100px; font-size: 20px; font-weight: bold;">Price Per Acre ($) Vs. Price Per Bushel of Corn ($)<br/></div>
+					<svg id="AcreVCorn" width="800" height="500"></svg>
+				</div>
+				<div style="float: left; width: 35%;">
+					<p style="font-size: 30px; font-weight: bold; color:#1a1a1a;">How does the Price of Corn Influence the Price of Cropland?<br/></p>
+                    <p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Corn Price V. Cropland Value Analysis:</p>
+					<p class="bodyText">The visualization to the right displays the US average price per acre of cropland, in US dollars, plotted against the price per bushel of corn, also in US dollars. As we can see, excluding outliers for the time being, the plot loosely follows a linear trend. Logically this makes sense, as a farm is making more money the land should be more valuable. However, take a look at the outliers: 2014 through 2017. These points have outpaced the linear trend seen in the data, possibly as a result of the overall increase in US real estate values?</p>
+					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Final Thoughts:</p>
+					<p class="bodyText">Lastly, in summary, the relationship between the price of corn and the average price per acre of cropland seem to follow a linear relationship. Revisiting the opening, aside from your political alignment, tarriffs imposed on corn will decrease the overall price of the crop thus resulting in devalued farms. This will hurt millions of hard working farmers and their families.</p>
+				</div>
+			</div>
+			<div class="section" style="width:100%; height:100%; padding-left:3%; padding-right:7%;">
+				<div style="float: right; width: 45%;">
+                    <p style="font-size: 20px; font-weight: bold; color:#1a1a1a;">Anotations:</p>
+					<p class="bodyText">The annotations are used to provide context to each individual slide as well as relate each slide to the overall guidance of the slideshow. In order to maintain consistency, each slide has two part annotations where the first part provides a description of the visualization and the second part provides either a bit of conclusion from the visualization or a guiding question. Tooltips are available in each chart to provide further information about specific points in the graph or trends. I alternated left and right positioning of the annotations: two right and two left, in order to provide visual consistency throughout the slideshow.</p>
+                    <p style="font-size: 20px; font-weight: bold; color:#1a1a1a;">Parameters:</p>
+                    <p class="bodyText">There are a few different parameters throughout the interactive slideshow. The slide titles themselves are parameters and that can be controlled by the 7 dots on the right side of the screen. The viewer can navigate through the presentation using these and understand where they are in the presentation. Furthermore, the parameters are the price per acre of cropland, the production of corn, the number of farms, the price of corn, and the respective year.</p>
+                    <p style="font-size: 20px; font-weight: bold; color:#1a1a1a;">Triggers:</p>
+                    <p class="bodyText">The main trigger throughout the entire slideshow is that the user has the ability to filter out data as he or she chooses in order to narrow down on a specific region or state using the legends of the graphs. Furthrmore, the viewer can trigger events by scrolling through the presentation or selecting the specific slide via the dots on the right side of the screen. Lastly, when a viewer highlights a specific point on a chart it triggers the annotation with more specific information to appear.</p>
+					<div style="padding-left:6%;">
+					</div>
+				</div>
+				<div style="float: left; width: 40%;">
+					<p style="font-size: 30px; font-weight: bold; color:#1a1a1a;">About this Visualization<br/></p>
+					<p style="font-size: 20px; font-weight: bold; color:#1a1a1a;">Structure:</p>
+                    	<p class="bodyText">I decided to utilize a hybrid structure of an <b>interactive slideshow</b>. There is guidance provided on each individual scene; however, the viewer has the ability to interact with the visualizations and progress using the circles on the right side of the screren.</p>
+					<p style="font-size: 20px; font-weight: bold; color:#1a1a1a;">Scenes:</p>
+					   <p class="bodyText">There are four scenes in this presentation, with each scene providing background and context to the overarching questions: Which states will be most impacted by the tarriffs and how does the price of corn influence the value of American farms? The first scene provides current state to the value of cropland and how these values have changed over time. The second scene provides context to which states produce the most corn and which states have the most percentage of farms producing corn. The third scene provides background the price of corn as well as current state value. The final scene, the culmination, displays the correlation between corn prices and the value of cropland. There are two line graphs and two scatter plots as I wanted to provide a visual balance throughout the slideshow.</p>
+				</div>			
+			</div>
+			<div class="section" style="width:100%; height:100%; padding-left:3%; padding-right:7%;">
+				<div style="float: right; width: 50%;">
+					<div style="padding-left:6%;">
+						<p style="font-size: 30px; font-weight: bold; color:#1a1a1a;">References</br></p>					
+						<p class="bodyText"><a href='https://www.cmegroup.com/trading/agricultural/grain-and-oilseed/corn.html' >CME</a></p>
+                        <p class="bodyText"><a href='https://aces.illinois.edu/' >UIUC College of Agriculture</a></p>
+                        <p class="bodyText"><a href='https://www.ars.usda.gov/research/datasets/' >USDA</a></p>
+                        <p class="bodyText"><a href='https://github.com/alvarotrigo/fullPage.js' >fullPage.js</a></p>
+                        <p class="bodyText"><a href='https://bl.ocks.org/d3noob/c506ac45617cf9ed39337f99f8511218' >Simple Line Graph</a></p>
+                        <p class="bodyText"><a href='http://learnjsdata.com/read_data.html' >Read Data</a></p>
+                        <p class="bodyText"><a href='https://bl.ocks.org/mbostock/3884955' >Multi-Line Graph</a></p>
+                        <p class="bodyText"><a href='https://bl.ocks.org/mbostock/3887118' >Scatter Plot</a></p>
+                        <p class="bodyText"><a href='http://bl.ocks.org/Thanaporn-sk/5acb5a244ae976e0c9780d8450c39efb' >Brush Graph</a></p>
+                        <p class="bodyText"><a href='http://bl.ocks.org/Ctuauden/52d057254665400f561ef73cb6e5841a' >Legend Filtering</a></p>
+                        <p class="bodyText"><a href='https://codeburst.io/how-to-create-a-dynamic-website-in-30-minutes-with-fullpage-js-7e91b70dcdee' >Dynamic Circles</a></p>    
+					</div>
+				</div>
+				<div style="float: left; width: 50%;">
+					<p style="font-size: 30px; font-weight: bold; color:#1a1a1a;">Presentation Background<br/></p>
+					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">The purpose</p>
+					<p class="bodyText">This presentation was created for CS:498 Data Visualization at the University of Illinois at Urbana-Champaign. It was created as a means to showcase the power of D3.js and is for academic purposes only.</p>
+					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">The author</p>
+					<p class="bodyText">This project was created by <a href='https://www.linkedin.com/in/jacob-rettig-98b14063//'>Jacob Rettig</a> who is currently a graduate student at the University of Illinois at Urbana-Champaign.</p>
+					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Why Cropland?</p>
+					<p class="bodyText">Being originally from Illinois, a lot of my family still heavily relies on farming as their livelihood. It is very easy to get wrapped up in political rhetoric and fail to remember that a lot of policies have immediate and impactful effects on citizens. The data was provided by a couple of different sources such as: the University of Illinois at Urbana-Champaign Agricultural College, the Agricultural Department of the United States Government, and the Chicago Mercantile Exchange. I pre-processed most of the data in order to create concise datasets.</p>
+				</div>			
+			</div>
+		</div>
+		<a id="footer" href="#About">About this Visualization</a>
+		<script>
+
+			$(document).ready(function() {
+				$('#wrapper').fullpage({
+					sectionsColor: ['#ffff99', '#E5F7FF', '#E5E5E5', '#E5F7FF', '#E5E5E5', '#E5F7FF', '#E5E5E5'],
+					navigation: true,
+					navigationPosition: 'right',
+					navigationTooltips: ['Overview', 'Acre Cost', 'Total Production', 'Corn Price', 'Comparison', 'About', 'Background'],
+					anchors:['Overview', 'Acre Cost', 'Total Production', 'Corn Price', 'Comparison', 'About', 'Background']
+				});
+			});
+            
+            //Global 
+            
+            // time 	
+			var parseDate = d3.timeParse("%Y");
+			var formatTime = d3.timeFormat("%Y");
+
+			// color
+			var color = d3.scaleOrdinal(d3.schemeCategory10);
+            
+            //Cropland Value V. Year Graph 
+            
+			// Tooltips
+			var div = d3.select("body").append("div")
+				.attr("class", "tooltip")
+				.style("opacity", 0);
+
+			// SVG
+			var vis = d3.select("#CroplandVYear");
+
+			// Dimensions
+			var	MARGINS = { top: 20, right: 210, bottom: 130, left: 70 },
+				MARGINS2 = { top: 410, right: 210, bottom: 50, left: 70 },
+				WIDTH = +vis.attr("width") - MARGINS.left - MARGINS.right,
+				HEIGHT = +vis.attr("height") - MARGINS.top - MARGINS.bottom,
+				HEIGHT2 = +vis.attr("height") - MARGINS2.top - MARGINS2.bottom;
+
+			// Scales
+			var xScale = d3.scaleTime().range([0, WIDTH]),
+				xScale2 = d3.scaleTime().range([0, WIDTH]),
+				yScale = d3.scaleLinear().range([HEIGHT, 0]),
+				yScale2 = d3.scaleLinear().range([HEIGHT2, 0]);
+
+			// Grid Lines X-axis function
+			function make_x_gridlines() {		
+			    return d3.axisBottom(xScale)
+			        .ticks(10)
+			}
+
+			// Grid Lines Y-axis function
+			function make_y_gridlines() {		
+			    return d3.axisLeft(yScale)
+			        .ticks(10)
+			}
+
+			// Axis
+			var	xAxis = d3.axisBottom(xScale),
+				xAxis2 = d3.axisBottom(xScale2),
+				yAxis = d3.axisLeft(yScale);
+
+			// Brush
+			var brush = d3.brushX()
+			    .extent([[0, 0], [WIDTH, HEIGHT2]])
+			    .on("brush end", brushed);
+
+			// Draw charts
+			var focus = vis.append("g")
+			    .attr("class", "focus")
+			    .attr("transform", "translate(" + MARGINS.left + "," + MARGINS.top + ")");
+
+			// Context bar charts
+			var context = vis.append("g")
+			    .attr("class", "context")
+			    .attr("transform", "translate(" + MARGINS2.left + "," + MARGINS2.top + ")");
+
+			// Points focus bar
+			var points = vis.append("g")
+			    .attr("class", "points")
+			    .attr("transform", "translate(" + MARGINS.left + "," + MARGINS.top + ")");
+
+			// Line definition for focus section
+			var lineGen = d3.line()
+				.x(function(d) { return xScale(d.Year); })
+				.y(function(d) { return yScale(d.Acre_Value); });
+
+			// Line definition for context section
+			var lineGen2 = d3.line()
+				.x(function(d) { return xScale2(d.Year); })
+				.y(function(d) { return yScale2(d.Acre_Value); });
+
+			// clipPath definition
+			vis.append("defs").append("clipPath")
+				.attr("id", "clip")
+				.append("rect")
+				.attr("width", WIDTH)
+				.attr("height", HEIGHT);
+
+			// Acre Value over time 
+
+			// Source of information
+			d3.csv("./CropLandValues.csv", function(data) {	
+
+				// Acre_Value and Year
+				data.forEach(function(d) {
+					d.Acre_Value = +d.Acre_Value;
+					d.Year = parseDate(d.Year);
+				});
+                console.log(data[1]);
+
+				// State names
+				var dataGroup = d3.nest()
+				    .key(function(d) { return d.State; })
+				    .entries(data);
+                    console.log(dataGroup);
+
+				// Regions
+				var dataRegion = d3.nest()
+				    .key(function(d) { return d.Region; })
+				    .entries(data);
+                    console.log(dataRegion);
+
+				// Set domain for ranges
+				xScale.domain([d3.min(data, function(d) { return d.Year; }), d3.max(data, function(d) { return d.Year; })])
+				yScale.domain([0, d3.max(data, function(d) { return d.Acre_Value; }) + 500]);
+				xScale2.domain(xScale.domain());
+				yScale2.domain(yScale.domain());
+
+				// Plot for each state
+				dataGroup.forEach(function(d, i) {
+
+					// tooltips
+					points.selectAll("dot")
+						.data(d.values)
+						.enter().append("circle")
+						.attr("r", 2)
+						.attr("cx", function(v) { return xScale(v.Year); })
+						.attr("cy", function(v) { return yScale(v.Acre_Value); })
+						.attr("class", "line")
+						// Set ID with region to each line to easily filter
+						.attr('id', function(v) { return 'point_'+v.Region.replace(/\s+/g, ''); })
+						.attr('clip-path', 'url(#clip)')
+						.on("mouseover", function(v) {
+							div.transition()
+								.duration(200)
+								.style("opacity", .9);
+							div.html("<b style='font-size:12px; color:#333333'>" + v.State + "</b><br/><b>Year: </b>" + formatTime(v.Year) + "<br/><b>Price Per Acre ($): </b>" + v.Acre_Value)
+								.style("left", (d3.event.pageX) + "px")
+								.style("top", (d3.event.pageY - 28) + "px");
+						})
+						.on("mouseout", function(v) {
+							div.transition()
+								.duration(500)
+								.style("opacity", 0);
+						});
+
+					// Line graphs on focus
+					focus.append("path")
+						.datum(d.values)
+						.attr("class", "line")
+					    .attr('stroke-width', 1)
+					    .attr('fill', 'none')
+					    // Set ID with region to each line to easily filter
+					    .attr('id', 'line_'+d.values[0].Region.replace(/\s+/g, ''))
+					    .attr('clip-path', 'url(#clip)')
+						.attr("d", lineGen(d.values));
+
+					// Line graphs on context
+					context.append("path")
+						.datum(d.values)
+						.attr("class", "line")
+						.attr('stroke-width', 1)
+					    .attr('fill', 'none')
+					    // Set ID with region to each line to easily filter
+					    .attr('id', 'line_'+d.values[0].Region.replace(/\s+/g, ''))
+					    .attr('clip-path', 'url(#clip)')
+						.attr("d", lineGen2(d.values));
+				});
+
+				// Legend
+				dataRegion.forEach(function(d, i) {
+
+					// Text on legend
+					vis.append("text")
+						.attr("class", "legend")
+						.attr("x", WIDTH + MARGINS.left + 30)
+						.attr("y", HEIGHT/2 + i * 20)
+						.style("fill", "black")
+						.text(d.key)
+						.attr('id', 'legendText_'+d.values[0].Region.replace(/\s+/g, ''))
+						.on("mouseover", function(v) {
+							var shadow = "2px 2px 2px #808080";
+							d3.selectAll("#legendColor_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 1).style("stroke", "black");
+							d3.selectAll("#legendText_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
+						})
+						.on("mouseout", function(v) {
+							var shadow = "2px 2px 2px #aaa";
+							d3.selectAll("#legendColor_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 0).style("stroke", "none");
+							d3.selectAll("#legendText_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
+						})
+						.on('click', function() {
+							var active = d.active ? false : true;
+							var opacity = active ? 0 : 1;
+							var legendOpacity = active ? 0.3 : 1;
+							var shadow = active ? "none" : "2px 2px 2px #aaa";
+							var radius = active ? 0 : 2.5;
+							d3.selectAll("#line_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", opacity);
+							d3.selectAll("#point_"+d.values[0].Region.replace(/\s+/g, '')).attr("r", radius);
+							d3.selectAll("#legendColor_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity);
+							d3.selectAll("#legendText_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity).style("text-shadow", shadow);
+							d.active = active;
+						});
+
+					vis.append("rect")
+						.attr("x", WIDTH + MARGINS.left + 15)
+						.attr("y", HEIGHT/2 + i * 20 - 10)
+						.attr('fill', color(i))
+						.attr("width", 10)
+						.attr("height", 10)
+						.attr('id', 'legendColor_'+d.values[0].Region.replace(/\s+/g, ''))
+						.on("mouseover", function(v) {
+							var shadow = "2px 2px 2px #808080";
+							d3.selectAll("#legendColor_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 1).style("stroke", "black");
+							d3.selectAll("#legendText_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
+						})
+						.on("mouseout", function(v) {
+							var shadow = "2px 2px 2px #aaa";
+							d3.selectAll("#legendColor_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 0).style("stroke", "none");
+							d3.selectAll("#legendText_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
+						})
+						.on('click', function() {
+							var active = d.active ? false : true;
+							var opacity = active ? 0 : 1;
+							var legendOpacity = active ? 0.3 : 1;
+							var radius = active ? 0 : 2.5;
+							d3.selectAll("#line_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", opacity);
+							d3.selectAll("#point_"+d.values[0].Region.replace(/\s+/g, '')).attr("r", radius);
+							d3.selectAll("#legendColor_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity);
+							d3.selectAll("#legendText_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity);
+							d.active = active;
+						});
+
+					// Set colors
+					focus.selectAll("#line_"+d.values[0].Region.replace(/\s+/g, '')).attr('stroke', color(i));
+					context.selectAll("#line_"+d.values[0].Region.replace(/\s+/g, '')).attr('stroke', color(i));
+					points.selectAll("#point_"+d.values[0].Region.replace(/\s+/g, '')).attr('fill', color(i));
+				});
+
+				// Set X axis to focus section
+				focus.append("g")
+					.attr("class", "axis axis--x")
+					.attr("transform", "translate(0," + HEIGHT + ")")
+					.call(xAxis);
+
+				// Set Y axis to focus section
+				focus.append("g")
+					.attr("class", "axis axis--y")
+					.call(yAxis);
+
+				// Set X axis to context section
+				context.append("g")
+					.attr("class", "axis axis--x")
+					.attr("transform", "translate(0," + HEIGHT2 + ")")
+					.call(xAxis2);
+
+				// Set brush call for context bar
+				context.append("g")
+					.attr("class", "brush")
+					.call(brush)
+					.call(brush.move, xScale.range());
+
+				// X Axis label
+				context.append("text")
+					.attr("transform", "translate(" + (WIDTH/2) + "," + (HEIGHT2 + 40) + ")")
+					.style("text-anchor", "middle")
+					.text("Year");
+
+				// Y Axis label
+				vis.append("text")
+					.attr("transform", "rotate(-90), translate(" + (-1 * HEIGHT / 2 ) + ", 18)")
+					.style("text-anchor", "middle")
+					.text("Price Per Acre of Cropland ($)"); 
+
+				// Add the grid lines to X-Axis
+				focus.append("g")			
+					.attr("class", "grid")
+					.attr("transform", "translate(0," + HEIGHT + ")")
+					.call(make_x_gridlines()
+						.tickSize(-HEIGHT)
+						.tickFormat("")
+					)
+
+				// Add the grid lines to Y-Axis
+				focus.append("g")			
+					.attr("class", "grid")
+					.call(make_y_gridlines()
+						.tickSize(-WIDTH)
+						.tickFormat("")
+					)   
+			});
+
+			// Brushing function
+			function brushed() {
+				var s = d3.event.selection || xScale2.range();
+				xScale.domain(s.map(xScale2.invert, xScale2));
+				focus.selectAll(".line").attr("d", lineGen);
+				points.selectAll(".line")
+					.attr("cx", function(v) { return xScale(v.Year); })
+					.attr("cy", function(v) { return yScale(v.Acre_Value); })
+				focus.select(".grid").call(make_x_gridlines()
+						.tickSize(-HEIGHT)
+						.tickFormat("")
+					);
+				focus.select(".axis--x").call(xAxis);
+			}
+            
+            /////Acre V Corn Price 
+            
+            // tooltips
+			var div_2 = d3.select("body").append("div")
+				.attr("class", "tooltip")
+				.style("opacity", 0);
+
+			// SVG 
+			var vis_2 = d3.select("#AcreVCorn");
+
+			// Dimensions
+			var	MARGINS_2 = { top: 20, right: 210, bottom: 130, left: 60 },
+				MARGINS2_2 = { top: 410, right: 210, bottom: 50, left: 60 },
+				WIDTH_2 = +vis_2.attr("width") - MARGINS_2.left - MARGINS_2.right,
+				HEIGHT_2 = +vis_2.attr("height") - MARGINS_2.top - MARGINS_2.bottom,
+				HEIGHT2_2 = +vis_2.attr("height") - MARGINS2_2.top - MARGINS2_2.bottom;
+
+			// Scales
+			var xScale_2 = d3.scaleLinear().range([0, WIDTH_2]),
+				xScale2_2 = d3.scaleLinear().range([0, WIDTH_2]),
+				yScale_2 = d3.scaleLinear().range([HEIGHT_2, 0]),
+				yScale2_2 = d3.scaleLinear().range([HEIGHT2_2, 0]);
+
+			// Grid Lines X-axis function
+			function make_x_gridlines_2() {		
+			    return d3.axisBottom(xScale_2)
+			        .ticks(10)
+			}
+
+			// Grid Lines Y-axis function
+			function make_y_gridlines_2() {		
+			    return d3.axisLeft(yScale_2)
+			        .ticks(10)
+			}
+
+			// Axis
+			var	xAxis_2 = d3.axisBottom(xScale_2),
+				xAxis2_2 = d3.axisBottom(xScale2_2),
+				yAxis_2 = d3.axisLeft(yScale_2);
+
+			// Define brush call
+			var brush_2 = d3.brushX()
+			    .extent([[0, 0], [WIDTH_2, HEIGHT2_2]])
+			    .on("brush end", brushed_2);
+
+			// Append class context that will be used to draw the charts in the context bar
+			var context_2 = vis_2.append("g")
+			    .attr("class", "context_2")
+			    .attr("transform", "translate(" + MARGINS2_2.left + "," + MARGINS2_2.top + ")");
+
+			// Append class points that will be used to draw the points in the graph
+			var points_2 = vis_2.append("g")
+			    .attr("class", "points_2")
+			    .attr("transform", "translate(" + MARGINS_2.left + "," + MARGINS_2.top + ")");
+
+			// clipPath definition
+			vis_2.append("defs").append("clipPath")
+				.attr("id", "clip_2")
+				.append("rect")
+				.attr("width", WIDTH_2)
+				.attr("height", HEIGHT_2);
+
+			// Source of information
+			d3.csv("./usacropvalues.csv", function(data) {	
+				
+				// Fertility rate and happiness score to number
+				data.forEach(function(d) {
+					d.Value = +d.Value;
+					d.Price = +d.Price;
+				});
+
+				// Nest data based on Region
+				var dataRegion_2 = d3.nest()
+				    .key(function(d) { return d.Region; })
+				    .entries(data);
+
+				// Set domain for ranges dynamically based on data
+				xScale_2.domain([d3.min(data, function(d) { return d.Price; }) - 0.1, d3.max(data, function(d) { return d.Price; }) + 0.1])
+				yScale_2.domain([500, d3.max(data, function(d) { return d.Value; }) + 500]);
+				xScale2_2.domain(xScale_2.domain());
+				yScale2_2.domain(yScale_2.domain());
+
+				// Add the grid lines to X-Axis
+				points_2.append("g")			
+					.attr("class", "grid")
+					.attr("transform", "translate(0," + HEIGHT_2 + ")")
+					.call(make_x_gridlines_2()
+						.tickSize(-HEIGHT_2)
+						.tickFormat("")
+					)
+
+				// Add the grid lines to Y-Axis
+				points_2.append("g")			
+				.attr("class", "grid")
+				.call(make_y_gridlines_2()
+					.tickSize(-WIDTH_2)
+					.tickFormat("")
+				) 
+
+				// Add the dots with tooltips
+				points_2.selectAll("dot")
+					.data(data)
+					.enter().append("circle")
+					.attr("r", 4)
+					.attr("cx", function(v) { return xScale_2(v.Price); })
+					.attr("cy", function(v) { return yScale_2(v.Value); })
+					.attr("class", "line_2")
+					.attr('id', function(v) { return 'point_2_'+ v.Region.replace(/\s+/g, ''); } )
+					.attr('clip-path', 'url(#clip_2)')
+					.on("mouseover", function(v) {
+						div_2.transition()
+							.duration(200)
+							.style("opacity", .9);
+						div_2.html("<b style='font-size:12px; color:#333333'>" + v.Year + "<br/><b>Price Per Acre($): </b>" + v.Value + "<br/><b>Price Per Bushel of Corn($): </b>" + v.Price)
+							.style("left", (d3.event.pageX) + "px")
+							.style("top", (d3.event.pageY - 28) + "px");
+					})
+					.on("mouseout", function(v) {
+						div_2.transition()
+						.duration(500)
+						.style("opacity", 0);
+					});
+
+				// Draw the scatter graph on context section
+				context_2.selectAll("dot")
+					.data(data)
+					.enter().append("circle")
+					.attr("r", 2.5)
+					.attr("cx", function(v) { return xScale2_2(v.Price); })
+					.attr("cy", function(v) { return yScale2_2(v.Value); })
+					.attr("class", "line_2")
+					.attr('id', function(v) { return 'point_2_'+v.Region.replace(/\s+/g, '') } )
+					.attr('clip-path', 'url(#clip_2)');
+
+				// For each Region add a legend and color
+				dataRegion_2.forEach(function(d, i) {
+
+					// Create legend text for each region
+					vis_2.append("text")
+						.attr("class", "legend")
+						.attr("x", WIDTH_2 + MARGINS_2.left + 30)
+						.attr("y", HEIGHT_2/2 + i * 20)
+						.style("fill", "black")
+						.text(d.key)
+						.attr('id', 'legendText_2_'+d.values[0].Region.replace(/\s+/g, ''))
+						.on("mouseover", function(v) {
+							var shadow = "2px 2px 2px #808080";
+							d3.selectAll("#legendColor_2_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 1).style("stroke", "black");
+							d3.selectAll("#legendText_2_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
+						})
+						.on("mouseout", function(v) {
+							var shadow = "2px 2px 2px #aaa";
+							d3.selectAll("#legendColor_2_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 0).style("stroke", "none");
+							d3.selectAll("#legendText_2_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
+						})
+						.on('click', function() {
+							var active = d.active ? false : true;
+							var opacity = active ? 0 : 1;
+							var legendOpacity = active ? 0.3 : 1;
+							var shadow = active ? "none" : "2px 2px 2px #aaa";
+							var radius = active ? 0 : 4;
+							d3.selectAll("#line_2_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", opacity);
+							d3.selectAll("#point_2_"+d.values[0].Region.replace(/\s+/g, '')).attr("r", radius);
+							d3.selectAll("#legendColor_2_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity);
+							d3.selectAll("#legendText_2_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity).style("text-shadow", shadow);
+							d.active = active;
+						});
+
+					// Create colored rectangle for each region				
+					vis_2.append("rect")
+						.attr("x", WIDTH_2 + MARGINS_2.left + 15)
+						.attr("y", HEIGHT_2/2 + i * 20 - 10)
+						.attr('fill', color(i))
+						.attr("width", 10)
+						.attr("height", 10)
+						.attr('id', 'legendColor_2_'+d.values[0].Region.replace(/\s+/g, ''))
+						.on("mouseover", function(v) {
+							var shadow = "2px 2px 2px #808080";
+							d3.selectAll("#legendColor_2_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 1).style("stroke", "black");
+							d3.selectAll("#legendText_2_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
+						})
+						.on("mouseout", function(v) {
+							var shadow = "2px 2px 2px #aaa";
+							d3.selectAll("#legendColor_2_"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 0).style("stroke", "none");
+							d3.selectAll("#legendText_2_"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
+						})
+						.on('click', function() {
+							var active = d.active ? false : true;
+							var opacity = active ? 0 : 1;
+							var legendOpacity = active ? 0.3 : 1;
+							var radius = active ? 0 : 4;
+							d3.selectAll("#line_2_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", opacity);
+							d3.selectAll("#point_2_"+d.values[0].Region.replace(/\s+/g, '')).attr("r", radius);
+							d3.selectAll("#legendColor_2_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity);
+							d3.selectAll("#legendText_2_"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity);
+							d.active = active;
+						});
+
+					// Set dots color by region
+					context_2.selectAll("#point_2_"+d.values[0].Region.replace(/\s+/g, '')).attr('fill', color(i));
+					points_2.selectAll("#point_2_"+d.values[0].Region.replace(/\s+/g, '')).attr('fill', color(i));
+				});
+
+				// Set X axis to scatter plot section
+				points_2.append("g")
+					.attr("class", "axis axis--x")
+					.attr("transform", "translate(0," + HEIGHT_2 + ")")
+					.call(xAxis_2);
+
+				// Set Y axis to scatter plot section
+				points_2.append("g")
+					.attr("class", "axis axis--y")
+					.call(yAxis_2);
+
+				// Set X axis to context section
+				context_2.append("g")
+					.attr("class", "axis axis--x")
+					.attr("transform", "translate(0," + HEIGHT2_2 + ")")
+					.call(xAxis2_2);
+
+				// Set brush call for context bar
+				context_2.append("g")
+					.attr("class", "brush_2")
+					.call(brush_2)
+					.call(brush_2.move, xScale_2.range());
+
+				// X Axis label
+				context_2.append("text")
+					.attr("transform", "translate(" + (WIDTH_2/2) + "," + (HEIGHT2_2 + 40) + ")")
+					.style("text-anchor", "middle")
+					.text("Price Per Bushel of Corn ($)");
+
+				// Y Axis label
+				vis_2.append("text")
+					.attr("transform", "rotate(-90), translate(" + (-1 * HEIGHT_2 / 2 ) + ", 13)")
+					.style("text-anchor", "middle")
+					.text("Price Per Acre of Cropland ($)");     
+			});
+
+			// Refresh ranges and line graphs on scatter plot section for brushing action
+			function brushed_2() {
+				var s = d3.event.selection || xScale2_2.range();
+				xScale_2.domain(s.map(xScale2_2.invert, xScale2_2));
+				points_2.selectAll(".line_2")
+					.attr("cx", function(v) { return xScale_2(v.Price); })
+					.attr("cy", function(v) { return yScale_2(v.Value); });
+				points_2.select(".axis--x").call(xAxis_2);
+				points_2.select(".grid").call(make_x_gridlines_2()
+						.tickSize(-HEIGHT_2)
+						.tickFormat("")
+					);
+			}
+            
+            ///Corn Production V. Number of Farms
+            
+            // Tooltips
+			var div_3 = d3.select("body").append("div")
+				.attr("class", "tooltip")
+				.style("opacity", 0);
+
+			// SVG
+			var vis_3 = d3.select("#CornProduction");
+
+			// Dimensions
+			var	MARGINS_2_3_4 = { top: 20, right: 210, bottom: 130, left: 95 },
+				MARGINS2_2_3_4 = { top: 410, right: 210, bottom: 50, left: 95 },
+				WIDTH_2_3_4 = +vis_3.attr("width") - MARGINS_2_3_4.left - MARGINS_2_3_4.right,
+				HEIGHT_2_3_4 = +vis_3.attr("height") - MARGINS_2_3_4.top - MARGINS_2_3_4.bottom,
+				HEIGHT2_2_3_4 = +vis_3.attr("height") - MARGINS2_2_3_4.top - MARGINS2_2_3_4.bottom;
+
+			// Scales
+			var xScale_2_3_4 = d3.scaleLinear().range([0, WIDTH_2_3_4]),
+				xScale2_2_3_4 = d3.scaleLinear().range([0, WIDTH_2_3_4]),
+				yScale_2_3_4 = d3.scaleLinear().range([HEIGHT_2_3_4, 0]),
+				yScale2_2_3_4 = d3.scaleLinear().range([HEIGHT2_2_3_4, 0]);
+
+			// Grid Lines X-axis function
+			function make_x_gridlines_2_3_4() {		
+			    return d3.axisBottom(xScale_2_3_4)
+			        .ticks(10)
+			}
+
+			// Grid Lines Y-axis function
+			function make_y_gridlines_2_3_4() {		
+			    return d3.axisLeft(yScale_2_3_4)
+			        .ticks(10)
+			}
+
+			// Axis
+			var	xAxis_2_3_4 = d3.axisBottom(xScale_2_3_4),
+				xAxis2_2_3_4 = d3.axisBottom(xScale2_2_3_4),
+				yAxis_2_3_4 = d3.axisLeft(yScale_2_3_4);
+
+			// Define brush call
+			var brush_2_3_4 = d3.brushX()
+			    .extent([[0, 0], [WIDTH_2_3_4, HEIGHT2_2_3_4]])
+			    .on("brush end", brushed_2_3_4);
+
+			// Append class context
+			var context_2_3_4 = vis_3.append("g")
+			    .attr("class", "context_2_3_4")
+			    .attr("transform", "translate(" + MARGINS2_2_3_4.left + "," + MARGINS2_2_3_4.top + ")");
+
+			// Append class points
+			var points_2_3_4 = vis_3.append("g")
+			    .attr("class", "points_2_3_4")
+			    .attr("transform", "translate(" + MARGINS_2_3_4.left + "," + MARGINS_2_3_4.top + ")");
+
+			// clipPath definition
+			vis_3.append("defs").append("clipPath")
+				.attr("id", "clip_2_3_4")
+				.append("rect")
+				.attr("width", WIDTH_2_3_4)
+				.attr("height", HEIGHT_2_3_4);
+
+			// Scatter plot corn production v number of farms
+			d3.csv("./cornproduction.csv", function(data) {	
+				data.forEach(function(d) {
+					d.Corn_Production = +d.Corn_Production;
+					d.Farms = +d.Farms;
+				});
+
+				// Nest based on region
+				var dataRegion_2_3_4 = d3.nest()
+				    .key(function(d) { return d.Region; })
+				    .entries(data);
+
+				// Set domain for ranges
+				xScale_2_3_4.domain([d3.min(data, function(d) { return d.Farms; }) - 100, d3.max(data, function(d) { return d.Farms; }) + 100])
+				yScale_2_3_4.domain([0, d3.max(data, function(d) { return d.Corn_Production; }) + 100000000]);
+				xScale2_2_3_4.domain(xScale_2_3_4.domain());
+				yScale2_2_3_4.domain(yScale_2_3_4.domain());
+
+				// Add the grid lines to X-Axis
+				points_2_3_4.append("g")			
+					.attr("class", "grid")
+					.attr("transform", "translate(0," + HEIGHT_2_3_4 + ")")
+					.call(make_x_gridlines_2_3_4()
+						.tickSize(-HEIGHT_2_3_4)
+						.tickFormat("")
+					)
+
+				// Add the grid lines to Y-Axis
+				points_2_3_4.append("g")			
+				.attr("class", "grid")
+				.call(make_y_gridlines_2_3_4()
+					.tickSize(-WIDTH_2_3_4)
+					.tickFormat("")
+				) 
+
+				// Add the dots
+				points_2_3_4.selectAll("dot")
+					.data(data)
+					.enter().append("circle")
+					.attr("r", 4)
+					.attr("cx", function(v) { return xScale_2_3_4(v.Farms); })
+					.attr("cy", function(v) { return yScale_2_3_4(v.Corn_Production); })
+					.attr("class", "line_2_3_4")
+					.attr('id', function(v) { return 'point_2_3_4'+ v.Region.replace(/\s+/g, ''); } )
+					.attr('clip-path', 'url(#clip_2_3_4)')
+					.on("mouseover", function(v) {
+						div_3.transition()
+							.duration(200)
+							.style("opacity", .9);
+						div_3.html("<b style='font-size:12px; color:#333333'>" + v.State + "</b><br/><b>Year: </b><br/><b>Number of Farms: </b>" + v.Farms + "<br/><b>Total Production (Bushels): </b>" + v.Corn_Production)
+							.style("left", (d3.event.pageX) + "px")
+							.style("top", (d3.event.pageY - 28) + "px");
+					})
+					.on("mouseout", function(v) {
+						div_3.transition()
+						.duration(500)
+						.style("opacity", 0);
+					});
+
+				// Draw the scatter graph
+				context_2_3_4.selectAll("dot")
+					.data(data)
+					.enter().append("circle")
+					.attr("r", 2.5)
+					.attr("cx", function(v) { return xScale2_2_3_4(v.Farms); })
+					.attr("cy", function(v) { return yScale2_2_3_4(v.Corn_Production); })
+					.attr("class", "line_2_3_4")
+					.attr('id', function(v) { return 'point_2_3_4'+v.Region.replace(/\s+/g, '') } )
+					.attr('clip-path', 'url(#clip_2_3_4)');
+
+				// add legend and color
+				dataRegion_2_3_4.forEach(function(d, i) {
+
+					// Create legend text for each region
+					vis_3.append("text")
+						.attr("class", "legend")
+						.attr("x", WIDTH_2_3_4 + MARGINS_2_3_4.left + 30)
+						.attr("y", HEIGHT_2_3_4/2 + i * 20)
+						.style("fill", "black")
+						.text(d.key)
+						.attr('id', 'legendText_2_3'+d.values[0].Region.replace(/\s+/g, ''))
+						.on("mouseover", function(v) {
+							var shadow = "2px 2px 2px #808080";
+							d3.selectAll("#legendColor_2_3_4"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 1).style("stroke", "black");
+							d3.selectAll("#legendText_2_3_4"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
+						})
+						.on("mouseout", function(v) {
+							var shadow = "2px 2px 2px #aaa";
+							d3.selectAll("#legendColor_2_3_4"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 0).style("stroke", "none");
+							d3.selectAll("#legendText_2_3_4"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
+						})
+						.on('click', function() {
+							var active = d.active ? false : true;
+							var opacity = active ? 0 : 1;
+							var legendOpacity = active ? 0.3 : 1;
+							var shadow = active ? "none" : "2px 2px 2px #aaa";
+							var radius = active ? 0 : 4;
+							d3.selectAll("#line_2_3_4"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", opacity);
+							d3.selectAll("#point_2_3_4"+d.values[0].Region.replace(/\s+/g, '')).attr("r", radius);
+							d3.selectAll("#legendColor_2_3_4"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity);
+							d3.selectAll("#legendText_2_3_4"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity).style("text-shadow", shadow);
+							d.active = active;
+						});
+
+					// Create rectangle			
+					vis_3.append("rect")
+						.attr("x", WIDTH_2_3_4 + MARGINS_2_3_4.left + 15)
+						.attr("y", HEIGHT_2_3_4/2 + i * 20 - 10)
+						.attr('fill', color(i))
+						.attr("width", 10)
+						.attr("height", 10)
+						.attr('id', 'legendColor_2_3_4'+d.values[0].Region.replace(/\s+/g, ''))
+						.on("mouseover", function(v) {
+							var shadow = "2px 2px 2px #808080";
+							d3.selectAll("#legendColor_2_3_4"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 1).style("stroke", "black");
+							d3.selectAll("#legendText_2_3_4"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
+						})
+						.on("mouseout", function(v) {
+							var shadow = "2px 2px 2px #aaa";
+							d3.selectAll("#legendColor_2_3_4"+d.values[0].Region.replace(/\s+/g, '')).style("stroke-width", 0).style("stroke", "none");
+							d3.selectAll("#legendText_2_3_4"+d.values[0].Region.replace(/\s+/g, '')).style("text-shadow", shadow);
+						})
+						.on('click', function() {
+							var active = d.active ? false : true;
+							var opacity = active ? 0 : 1;
+							var legendOpacity = active ? 0.3 : 1;
+							var radius = active ? 0 : 4;
+							d3.selectAll("#line_2_3_4"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", opacity);
+							d3.selectAll("#point_2_3_4"+d.values[0].Region.replace(/\s+/g, '')).attr("r", radius);
+							d3.selectAll("#legendColor_2_3_4"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity);
+							d3.selectAll("#legendText_2_3_4"+d.values[0].Region.replace(/\s+/g, '')).style("opacity", legendOpacity);
+							d.active = active;
+						});
+
+					// Set dot color
+					context_2_3_4.selectAll("#point_2_3_4"+d.values[0].Region.replace(/\s+/g, '')).attr('fill', color(i));
+					points_2_3_4.selectAll("#point_2_3_4"+d.values[0].Region.replace(/\s+/g, '')).attr('fill', color(i));
+				});
+
+				// Set X axis to scatter plot section
+				points_2_3_4.append("g")
+					.attr("class", "axis axis--x")
+					.attr("transform", "translate(0," + HEIGHT_2_3_4 + ")")
+					.call(xAxis_2_3_4);
+
+				// Set Y axis to scatter plot section
+				points_2_3_4.append("g")
+					.attr("class", "axis axis--y")
+					.call(yAxis_2_3_4);
+
+				// Set X axis to context section
+				context_2_3_4.append("g")
+					.attr("class", "axis axis--x")
+					.attr("transform", "translate(0," + HEIGHT2_2_3_4 + ")")
+					.call(xAxis2_2_3_4);
+
+				// Set brush call for context bar
+				context_2_3_4.append("g")
+					.attr("class", "brush_2_3_4")
+					.call(brush_2_3_4)
+					.call(brush_2_3_4.move, xScale_2_3.range());
+
+				// X Axis label
+				context_2_3_4.append("text")
+					.attr("transform", "translate(" + (WIDTH_2_3_4/2) + "," + (HEIGHT2_2_3_4 + 40) + ")")
+					.style("text-anchor", "middle")
+					.text("Number of Farms (In State)");
+
+				// Y Axis label
+				vis_3.append("text")
+					.attr("transform", "rotate(-90), translate(" + (-1 * HEIGHT_2_3_4 / 2 ) + ", 12)")
+					.style("text-anchor", "middle")
+					.text("Total Corn Production (# of Bushels)");     
+			});
+
+			// Brush function
+			function brushed_2_3_4() {
+				var s = d3.event.selection || xScale2_2_3_4.range();
+				xScale_2_3_4.domain(s.map(xScale2_2_3_4.invert, xScale2_2_3_4));
+				points_2.selectAll(".line_2_3_4")
+					.attr("cx", function(v) { return xScale_2_3_4(v.Farms); })
+					.attr("cy", function(v) { return yScale_2_3_4(v.Corn_Production); });
+				points_2_3_4.select(".axis--x").call(xAxis_2_3_4);
+				points_2_3_4.select(".grid").call(make_x_gridlines_2_3_4()
+						.tickSize(-HEIGHT_2_3_4)
+						.tickFormat("")
+					);
+			}
+            
+            //Corn Price Graph 
+            
+ 			// tooltips
+			var div4 = d3.select("body").append("div")
+				.attr("class", "tooltip")
+				.style("opacity", 0);
+
+			// SVG
+			var vis4 = d3.select("#CornPrice2");
+
+			// Dimensions
+			var	MARGINS_4 = { top: 20, right: 210, bottom: 130, left: 70 },
+				MARGINS2_4 = { top: 410, right: 210, bottom: 50, left: 70 },
+				WIDTH_4 = +vis4.attr("width") - MARGINS_4.left - MARGINS_4.right,
+				HEIGHT_4 = +vis4.attr("height") - MARGINS_4.top - MARGINS_4.bottom,
+				HEIGHT2_4 = +vis4.attr("height") - MARGINS2_4.top - MARGINS2_4.bottom;
+
+			// Scales
+			var xScale_4 = d3.scaleTime().range([0, WIDTH_4]),
+				xScale2_4 = d3.scaleTime().range([0, WIDTH_4]),
+				yScale_4 = d3.scaleLinear().range([HEIGHT_4, 0]),
+				yScale2_4 = d3.scaleLinear().range([HEIGHT2_4, 0]);
+
+			// Grid Lines X-axis function
+			function make_x_gridlines_4() {		
+			    return d3.axisBottom(xScale_4)
+			        .ticks(10)
+			}
+
+			// Grid Lines Y-axis function
+			function make_y_gridlines_4() {		
+			    return d3.axisLeft(yScale_4)
+			        .ticks(10)
+			}
+
+			// Axis
+			var	xAxis_4 = d3.axisBottom(xScale_4),
+				xAxis2_4 = d3.axisBottom(xScale2_4),
+				yAxis_4 = d3.axisLeft(yScale_4);
+
+			// Define brush call
+			var brush_4 = d3.brushX()
+			    .extent([[0, 0], [WIDTH_4, HEIGHT2_4]])
+			    .on("brush end", brushed_4);
+
+			// Append class focus
+			var focus_4 = vis4.append("g")
+			    .attr("class", "focus_4")
+			    .attr("transform", "translate(" + MARGINS_4.left + "," + MARGINS_4.top + ")");
+
+			// Append class context
+			var context_4 = vis4.append("g")
+			    .attr("class", "context_4")
+			    .attr("transform", "translate(" + MARGINS2_4.left + "," + MARGINS2_4.top + ")");
+
+			// Append class points
+			var points_4 = vis4.append("g")
+			    .attr("class", "points_4")
+			    .attr("transform", "translate(" + MARGINS_4.left + "," + MARGINS_4.top + ")");
+
+			// Line definition for focus section
+			var lineGen_4 = d3.line()
+				.x(function(d) { return xScale_4(d.Year); })
+				.y(function(d) { return yScale_4(d.CornPrice); });
+
+			// Line definition for context section
+			var lineGen2_4 = d3.line()
+				.x(function(d) { return xScale2_4(d.Year); })
+				.y(function(d) { return yScale2_4(d.CornPrice); });
+
+			// clipPath definition
+			vis4.append("defs").append("clipPath")
+				.attr("id", "clip")
+				.append("rect")
+				.attr("width", WIDTH_4)
+				.attr("height", HEIGHT_4);
+            
+            //Corn price v year
+			d3.csv("./cornprices.csv", function(data) {	
+				data.forEach(function(d) {
+					d.CornPrice = +d.CornPrice;
+					d.Year = parseDate(d.Year);
+				});
+                console.log(data[1]);
+
+				// Nest data country
+				var dataGroup_4 = d3.nest()
+				    .key(function(d) { return d.Crop; })
+				    .entries(data);
+                    console.log(dataGroup_4);
+
+				// N/A
+				var dataRegion_4 = d3.nest()
+				    .key(function(d) { return d.Crop; })
+				    .entries(data);
+                    console.log(dataRegion_4);
+
+				// Set domain for ranges 
+				xScale_4.domain([d3.min(data, function(d) { return d.Year; }), d3.max(data, function(d) { return d.Year; })])
+				yScale_4.domain([0, d3.max(data, function(d) { return d.CornPrice; }) + 2]);
+				xScale2_4.domain(xScale_4.domain());
+				yScale2_4.domain(yScale_4.domain());
+
+				// Plot points and lines
+				dataGroup_4.forEach(function(d, i) {
+
+					// tooltips
+					points_4.selectAll("dot")
+						.data(d.values)
+						.enter().append("circle")
+						.attr("r", 2)
+						.attr("cx", function(v) { return xScale_4(v.Year); })
+						.attr("cy", function(v) { return yScale_4(v.CornPrice); })
+						.attr("class", "line")
+						.attr('id', function(v) { return 'point_4'+v.Crop.replace(/\s+/g, ''); })
+						.attr('clip-path', 'url(#clip)')
+						.on("mouseover", function(v) {
+							div4.transition()
+								.duration(200)
+								.style("opacity", .9);
+							div4.html("<b style='font-size:12px; color:#333333'>" + v.Crop + "</b><br/><b>Year: </b>" + formatTime(v.Year) + "<br/><b>Price Per Bushel ($) </b>" + v.CornPrice)
+								.style("left", (d3.event.pageX) + "px")
+								.style("top", (d3.event.pageY - 28) + "px");
+						})
+						.on("mouseout", function(v) {
+							div4.transition()
+								.duration(500)
+								.style("opacity", 0);
+						});
+
+					// Draw the line graphs 
+					focus_4.append("path")
+						.datum(d.values)
+						.attr("class", "line")
+					    .attr('stroke-width', 1)
+					    .attr('fill', 'none')
+					    .attr('id', 'line_4'+d.values[0].Crop.replace(/\s+/g, ''))
+					    .attr('clip-path', 'url(#clip)')
+						.attr("d", lineGen_4(d.values));
+
+					// Draw the line graphs on context section
+					context_4.append("path")
+						.datum(d.values)
+						.attr("class", "line")
+						.attr('stroke-width', 1)
+					    .attr('fill', 'none')
+					    // Set ID with region to each line to easily filter
+					    .attr('id', 'line_4'+d.values[0].Crop.replace(/\s+/g, ''))
+					    .attr('clip-path', 'url(#clip)')
+						.attr("d", lineGen2_4(d.values));
+				});
+
+				// Legend (one country)
+				dataRegion_4.forEach(function(d, i) {
+
+					// Text on legend
+					vis4.append("text")
+						.attr("class", "legend")
+						.attr("x", WIDTH_4 + MARGINS_4.left + 30)
+						.attr("y", HEIGHT_4/2 + i * 20)
+						.style("fill", "black")
+						.text(d.key)
+						// Add ID to legend text for easily filtering
+						.attr('id', 'legendText_4'+d.values[0].Crop.replace(/\s+/g, ''))
+						.on("mouseover", function(v) {
+							var shadow = "2px 2px 2px #808080";
+							d3.selectAll("#legendColor_4"+d.values[0].Crop.replace(/\s+/g, '')).style("stroke-width", 1).style("stroke", "black");
+							d3.selectAll("#legendText_4"+d.values[0].Crop.replace(/\s+/g, '')).style("text-shadow", shadow);
+						})
+						.on("mouseout", function(v) {
+							var shadow = "2px 2px 2px #aaa";
+							d3.selectAll("#legendColor_4"+d.values[0].Crop.replace(/\s+/g, '')).style("stroke-width", 0).style("stroke", "none");
+							d3.selectAll("#legendText_4"+d.values[0].Crop.replace(/\s+/g, '')).style("text-shadow", shadow);
+						})
+						.on('click', function() {
+							var active = d.active ? false : true;
+							var opacity = active ? 0 : 1;
+							var legendOpacity = active ? 0.3 : 1;
+							var shadow = active ? "none" : "2px 2px 2px #aaa";
+							var radius = active ? 0 : 2.5;
+							d3.selectAll("#line_4"+d.values[0].Crop.replace(/\s+/g, '')).style("opacity", opacity);
+							d3.selectAll("#point_4"+d.values[0].Crop.replace(/\s+/g, '')).attr("r", radius);
+							d3.selectAll("#legendColor_4"+d.values[0].Crop.replace(/\s+/g, '')).style("opacity", legendOpacity);
+							d3.selectAll("#legendText_4"+d.values[0].Crop.replace(/\s+/g, '')).style("opacity", legendOpacity).style("text-shadow", shadow);
+							d.active = active;
+						});
+
+					// Colored rectangle on legend
+					vis4.append("rect")
+						.attr("x", WIDTH_4 + MARGINS_4.left + 15)
+						.attr("y", HEIGHT_4/2 + i * 20 - 10)
+						.attr('fill', color(i))
+						.attr("width", 10)
+						.attr("height", 10)
+						// Add ID to legend color for easily filtering
+						.attr('id', 'legendColor_4'+d.values[0].Crop.replace(/\s+/g, ''))
+						.on("mouseover", function(v) {
+							var shadow = "2px 2px 2px #808080";
+							d3.selectAll("#legendColor_4"+d.values[0].Crop.replace(/\s+/g, '')).style("stroke-width", 1).style("stroke", "black");
+							d3.selectAll("#legendText_4"+d.values[0].Crop.replace(/\s+/g, '')).style("text-shadow", shadow);
+						})
+						.on("mouseout", function(v) {
+							var shadow = "2px 2px 2px #aaa";
+							d3.selectAll("#legendColor_4"+d.values[0].Crop.replace(/\s+/g, '')).style("stroke-width", 0).style("stroke", "none");
+							d3.selectAll("#legendText_4"+d.values[0].Crop.replace(/\s+/g, '')).style("text-shadow", shadow);
+						})
+						.on('click', function() {
+							var active = d.active ? false : true;
+							var opacity = active ? 0 : 1;
+							var legendOpacity = active ? 0.3 : 1;
+							var radius = active ? 0 : 2.5;
+							d3.selectAll("#line_4"+d.values[0].Crop.replace(/\s+/g, '')).style("opacity", opacity);
+							d3.selectAll("#point_4"+d.values[0].Crop.replace(/\s+/g, '')).attr("r", radius);
+							d3.selectAll("#legendColor_4"+d.values[0].Crop.replace(/\s+/g, '')).style("opacity", legendOpacity);
+							d3.selectAll("#legendText_4"+d.values[0].Crop.replace(/\s+/g, '')).style("opacity", legendOpacity);
+							d.active = active;
+						});
+
+					// Set color by region
+					focus_4.selectAll("#line_4"+d.values[0].Crop.replace(/\s+/g, '')).attr('stroke', color(i));
+					context_4.selectAll("#line_4"+d.values[0].Crop.replace(/\s+/g, '')).attr('stroke', color(i));
+					points_4.selectAll("#point_4"+d.values[0].Crop.replace(/\s+/g, '')).attr('fill', color(i));
+				});
+
+				// Set X axis to focus section
+				focus_4.append("g")
+					.attr("class", "axis axis--x")
+					.attr("transform", "translate(0," + HEIGHT_4 + ")")
+					.call(xAxis_4);
+
+				// Set Y axis to focus section
+				focus_4.append("g")
+					.attr("class", "axis axis--y")
+					.call(yAxis_4);
+
+				// Set X axis to context section
+				context_4.append("g")
+					.attr("class", "axis axis--x")
+					.attr("transform", "translate(0," + HEIGHT2_4 + ")")
+					.call(xAxis2_4);
+
+				// Set brush call for context bar
+				context_4.append("g")
+					.attr("class", "brush")
+					.call(brush_4)
+					.call(brush_4.move, xScale_4.range());
+
+				// X Axis label
+				context_4.append("text")
+					.attr("transform", "translate(" + (WIDTH_4/2) + "," + (HEIGHT2_4 + 40) + ")")
+					.style("text-anchor", "middle")
+					.text("Year");
+
+				// Y Axis label
+				vis4.append("text")
+					.attr("transform", "rotate(-90), translate(" + (-1 * HEIGHT_4 / 2 ) + ", 18)")
+					.style("text-anchor", "middle")
+					.text("Price Per Bushel ($)"); 
+
+				// Add the grid lines to X-Axis
+				focus_4.append("g")			
+					.attr("class", "grid")
+					.attr("transform", "translate(0," + HEIGHT_4 + ")")
+					.call(make_x_gridlines_4()
+						.tickSize(-HEIGHT_4)
+						.tickFormat("")
+					)
+
+				// Add the grid lines to Y-Axis
+				focus_4.append("g")			
+					.attr("class", "grid")
+					.call(make_y_gridlines_4()
+						.tickSize(-WIDTH_4)
+						.tickFormat("")
+					)   
+			});
+
+			// brush function
+			function brushed_4() {
+				var s = d3.event.selection || xScale2.range();
+				xScale_4.domain(s.map(xScale2_4.invert, xScale2_4));
+				focus_4.selectAll(".line").attr("d", lineGen_4);
+				points_4.selectAll(".line")
+					.attr("cx", function(v) { return xScale_4(v.Year); })
+					.attr("cy", function(v) { return yScale_4(v.CornPrice); })
+				focus_4.select(".grid").call(make_x_gridlines_4()
+						.tickSize(-HEIGHT_4)
+						.tickFormat("")
+					);
+				focus_4.select(".axis--x").call(xAxis_4);
+			}
+
+
+
+    </script>
+    </body>
+</html>

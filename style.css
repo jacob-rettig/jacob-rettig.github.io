@@ -1,0 +1,80 @@
+#footer{
+  position:fixed;
+  height: 30px;
+  display:block;
+  width: 230px;
+  background: #333;
+  opacity: 0.8;
+  z-index:9;
+  text-align:center;
+  color: #f2f2f2;
+  padding: 10px 0 0 0;
+  bottom:0px;
+  border-top-right-radius: 8px;
+  text-decoration: none;
+}
+
+#footer:float:right{
+  opacity: .5;
+  background-color: #0099e6;
+}
+
+.tooltip {
+  position: absolute;
+  text-align: left;
+  padding: 8px;
+  font-size: 10.5px;
+  font-family: 'Cardo', serif;
+  color: #595959;
+  background: #e6e6e6;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #808080;
+  border-radius: 2.5px;
+  pointer-events: none;
+}
+
+.legend {
+  font-size: 13px;
+  text-shadow: 2px 2px 2px #aaa;
+}
+
+body {
+  font-family: 'Cardo', serif;
+}
+
+.grid line {
+  stroke: black;
+  stroke-opacity: 0.7;
+  shape-rendering: crispEdges;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+.bodyText {
+  font-size: 13.5px;
+  font-family: 'Cardo', serif;
+/*  -webkit-margin-before: 0.2em;
+  -webkit-margin-after: 0.2em;*/
+  color:#404040;
+  text-align: justify;
+}
+
+#sectionImage1{
+    text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+    background-image: url("./corn.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
