@@ -11,13 +11,13 @@
 	</head>
 	<body>
 		<div id="wrapper">
-			<div class="section" id="sectionImage1" style="width:100%; height:100%; padding-left:3%; padding-right:1.5%;">
+			<div class="section" id="sectionImage1" style="width:100%; height:100%; padding-left:3%; padding-right:3%;">
 				<div style="text-align: left; width: 100%;">
-					<div style="font-size: 80px; font-weight: bold; color:#FFFFFF;">America's Nest Egg<br/></div>
-					<p style="font-size: 33.5px; -webkit-margin-before: 0.2em; -webkit-margin-after: 0.2em; color:#FFFFFF;">How will the trade war influence America's Corn Production?</p><br/>
+					<div style="font-size: 80px; font-weight: bold; color:#FFFFFF;">America's Golden Seas<br/></div>
+					<p style="font-size: 33.5px; -webkit-margin-before: 0.2em; -webkit-margin-after: 0.2em; color:#FFFFFF;">How will the trade war influence America's Farm Prices?</p><br/>
                     <div class="bodyText"><div style="font-size: 20px; font-weight: bold; color:#FFFFFF;">What is Cropland? </div></br>
                     <div style="font-size: 16px; font-weight: bold; color:#FFFFFF;">Cropland is defined as, "Land used for the production of crops for harvest.", and for many American farmers it represents their families entire livelihood.  
-                    Regardless of your political alignment, recent tarriffs imposed on American agriculture will presumably hurt America's heartland. China, Canada, Mexico, and the EU have all announced tarriffs on American agriculture, specifically corn, and this presentation aims to understand how these tarriffs will influence the value of American farms.</div>
+                    Regardless of your political alignment, recent tarriffs imposed on American agriculture will presumably hurt America's heartland. China, Canada, Mexico, and the EU have all announced tarriffs on American agriculture, specifically corn, and this presentation aims to understand how these tarriffs will influence the value of American farms. In order to maintain brevity, this presentation will focus solely on the production and prices of corn produced in the United States.</div>
                     </br></br>   
                     <div style="font-size: 20px; font-weight: bold; color:#FFFFFF;">Driving Questions:</div></br>
                     <div style="font-size: 16px; font-weight: bold; color:#FFFFFF;">&nbsp;&nbsp;1. Which states will be most impacted by increased tarriffs? </div></br>
@@ -26,13 +26,13 @@
 					</div>
 				</div>
 			</div>
-			<div class="section" style="width:100%; height:100%; padding-left:3%; padding-right:1%;">
+			<div class="section" style="width:100%; height:100%; padding-left:1%; padding-right:5%;">
 				<div style="float: left; width: 40%; text-align: center;">
 					<div style="padding-left: 162px; font-size: 20px; font-weight: bold;">Cropland Value by State<br/></div>
 					<svg id="CroplandVYear" width="800" height="500"></svg>
 				</div>
-				<div style="float: right; width: 38%;">
-					<p style="font-size: 30px; font-weight: bold; color:#1a1a1a;">Which States Cost the Most to Grow?<br/></p>
+				<div style="float: right; width: 35%;">
+					<p style="font-size: 30px; font-weight: bold; color:#1a1a1a;">Which States Have the Most Expensive Cropland?<br/></p>
 					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Current Cropland Value:</p>
 					<p class="bodyText">The visualization to the left displays the cost of cropland, across the largest corn producing state, broken out by region from 1997 to 2017. The three most expensive states to purchase cropland are: New Jersey, California, and Arizona; respectively. This visualization provides a rough estimation of what a families farm would be worth if the land were to sell (the largest asset of any farm).</p>
 					<p style="font-size: 16px; font-weight: bold; color:#1a1a1a;">Changes Over Time:</p>
@@ -40,9 +40,9 @@
 				</div>			
 			</div>
 
-			<div class="section" style="width:100%; height:100%; padding-left:3%; padding-right:1%;">
+			<div class="section" style="width:100%; height:100%; padding-left:2%; padding-right:2%;">
 				<div style="float: right; width: 62%; text-align: center;">
-					<div style="padding-right: 100px; font-size: 20px; font-weight: bold;">Total Corn Production V. Number of Farms Per State<br/></div>
+					<div style="padding-right: 100px; font-size: 20px; font-weight: bold;">Total Corn Production V. Number of Farms Per State in 2017<br/></div>
 					<svg id="CornProduction" width="800" height="500"></svg>
 				</div>
 				<div style="float: left; width: 30%;">
@@ -54,7 +54,7 @@
 				</div>	
 			</div>
 
-			<div class="section" style="width:100%; height:100%; padding-left:3%; padding-right:1%;">
+			<div class="section" style="width:100%; height:100%; padding-left:3%; padding-right:5%;">
 				<div style="float: left; width: 40%; text-align: center;">
 					<div style="padding-left: 140px; font-size: 20px; font-weight: bold;">Price Per Bushel of Corn (1960-2017)<br/></div>
 					<svg id="CornPrice2" width="800" height="500"></svg>
@@ -229,7 +229,7 @@
 			// Acre Value over time 
 
 			// Source of information
-			d3.csv("https://raw.githubusercontent.com/jacob-rettig/jacob-rettig.github.io/master/CropLandValues.csv", function(data) {	
+			d3.csv("./CropLandValues.csv", function(data) {	
 
 				// Acre_Value and Year
 				data.forEach(function(d) {
@@ -808,7 +808,7 @@
 						div_3.transition()
 							.duration(200)
 							.style("opacity", .9);
-						div_3.html("<b style='font-size:12px; color:#333333'>" + v.State + "</b><br/><b>Year: </b><br/><b>Number of Farms: </b>" + v.Farms + "<br/><b>Total Production (Bushels): </b>" + v.Corn_Production)
+						div_3.html("<b style='font-size:12px; color:#333333'>" + v.State + "</b><br/><b>Year: 2017 </b><br/><b>Number of Farms: </b>" + v.Farms + "<br/><b>Total Production (Bushels): </b>" + v.Corn_Production)
 							.style("left", (d3.event.pageX) + "px")
 							.style("top", (d3.event.pageY - 28) + "px");
 					})
@@ -919,7 +919,7 @@
 				context_2_3_4.append("g")
 					.attr("class", "brush_2_3_4")
 					.call(brush_2_3_4)
-					.call(brush_2_3_4.move, xScale_2_3.range());
+					.call(brush_2_3_4.move, xScale_2_3_4.range());
 
 				// X Axis label
 				context_2_3_4.append("text")
